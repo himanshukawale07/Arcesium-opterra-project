@@ -1,0 +1,7 @@
+object_name,source_or_step,transformation_or_event,event_time,destination_or_next_step
+SEC001,Vendor Alpha,Raw price feed received,2026-11-21 11:55,Pricing validation
+SEC001,Pricing validation,Currency and freshness checks,2026-11-21 11:56,Pricing service
+SEC001,Pricing service,Priority rule applied,2026-11-21 11:57,Portfolio system (future)
+MSFT,Vendor Beta,Raw price feed received,2026-11-20 08:00,Pricing validation
+MSFT,Pricing validation,Freshness threshold failed,2026-11-21 11:00,Exception workbench
+MSFT,Exception workbench,Review assigned,2026-11-21 11:05,Pricing Operations

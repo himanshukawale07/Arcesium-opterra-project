@@ -1,0 +1,8 @@
+exception_id,category,severity,status,description,owner,sla_hours,recommended_action,created_at
+EX001,Stale price,High,Open,MSFT Vendor Beta observation is older than the configured freshness window.,Pricing Operations,4,Review timestamp and approved fallback source.,2026-11-21 10:00
+EX002,Identifier mismatch,Critical,In Progress,Incoming issuer identifier does not match the security master record.,Reference Data,2,Verify source mapping and issuer relationship before release.,2026-11-21 09:30
+EX003,Price variance,Medium,Open,Two vendor observations differ beyond the illustrative tolerance.,Pricing Operations,8,Compare source timestamps and valuation policy.,2026-11-20 15:10
+EX004,Missing attribute,Low,Closed,Issuer country attribute was missing from an incoming reference record.,Reference Data,24,Enrich from an approved reference source.,2026-11-19 13:20
+EX005,Duplicate transaction,High,Open,Potential duplicate transaction detected for the same instrument and quantity.,Investment Operations,4,Compare source trade IDs and execution timestamps.,2026-11-21 08:45
+EX006,Feed delay,Medium,In Progress,Market data feed arrived later than expected.,Data Operations,8,Check source availability and ingestion logs.,2026-11-21 07:15
+EX007,Currency conflict,High,Open,Transaction currency conflicts with configured instrument denomination.,Investment Operations,4,Validate instrument terms and source mapping.,2026-11-20 16:45
