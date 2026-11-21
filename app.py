@@ -10,7 +10,7 @@ st.set_page_config(page_title="Investment Data Hub", page_icon="📊", layout="w
 def load(name):
     return pd.read_csv(DATA / name)
 
-st.title("📊 Investment Data Hub")
+st.title("📊 Arcesium Opterra Project")
 st.caption("Independent financial data management product case study")
 st.info("Synthetic demonstration data only. This is not an Arcesium product or a production investment platform.")
 
