@@ -6,9 +6,20 @@ BASE = Path(__file__).parent
 DATA = BASE / "data"
 st.set_page_config(page_title="Investment Data Hub", page_icon="📊", layout="wide")
 
+
 @st.cache_data
 def load(name):
-    return pd.read_csv(DATA / name)
+    file_path = DATA / name
+
+    # Support files stored either in the data folder or repository root
+    if not file_path.exists():
+        file_path = BASE / name
+
+    if not file_path.exists():
+        raise FileNotFoundError(f"Could not find data file: {name}")
+
+    return pd.read_csv(file_path)
+
 
 st.title("📊 Arcesium Opterra Project")
 st.caption("Independent financial data management product case study")
